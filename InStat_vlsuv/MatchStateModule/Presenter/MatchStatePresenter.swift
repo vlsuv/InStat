@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MatchStateViewType {
-    func succes()
+    func succes(with match: Match)
     func failure(with error: Error)
 }
 
@@ -19,7 +19,8 @@ protocol MatchStatePresenterType {
 }
 
 protocol MatchStatePresenterInputs {
-    
+    func didTapRefresh()
+    func didTapVideo()
 }
 
 protocol MatchStatePresenterOutputs {
@@ -42,18 +43,34 @@ class MatchStatePresenter: MatchStatePresenterType, MatchStatePresenterInputs, M
         self.router = router
         self.apiService = apiService
         
-        apiService.getMatchInfo { result in
-            switch result {
-            case .success(let match):
-                print("succes: \(match)")
-            case .failure(let error):
-                print(error)
-            }
-        }
+        getMatchInfo()
     }
     
     // MARK: - Inputs Handlers
+    func didTapRefresh() {
+        getMatchInfo()
+    }
+    
+    func didTapVideo() {
+        print("handler video")
+    }
     
     // MARK: - Outputs Handlers
     
+}
+
+// MARK: - API Handlers
+extension MatchStatePresenter {
+    private func getMatchInfo() {
+        apiService.getMatchInfo { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let match):
+                    self?.view.succes(with: match)
+                case .failure(let error):
+                    self?.view.failure(with: error)
+                }
+            }
+        }
+    }
 }

@@ -19,6 +19,10 @@
 		671FE93F2678D82400ACE738 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE93E2678D82400ACE738 /* APIService.swift */; };
 		671FE9412678E22B00ACE738 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9402678E22B00ACE738 /* Match.swift */; };
 		671FE9442678FEA700ACE738 /* APIServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9432678FEA700ACE738 /* APIServiceEndpoint.swift */; };
+		671FE9462679012F00ACE738 /* MatchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9452679012F00ACE738 /* MatchContentView.swift */; };
+		671FE949267901C600ACE738 /* UIView Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE948267901C600ACE738 /* UIView Extensions.swift */; };
+		671FE94C26790D7A00ACE738 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE94B26790D7A00ACE738 /* Image.swift */; };
+		671FE94E26790DB500ACE738 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE94D26790DB400ACE738 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		671FE93E2678D82400ACE738 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		671FE9402678E22B00ACE738 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		671FE9432678FEA700ACE738 /* APIServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceEndpoint.swift; sourceTree = "<group>"; };
+		671FE9452679012F00ACE738 /* MatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchContentView.swift; sourceTree = "<group>"; };
+		671FE948267901C600ACE738 /* UIView Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extensions.swift"; sourceTree = "<group>"; };
+		671FE94B26790D7A00ACE738 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		671FE94D26790DB400ACE738 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,8 @@
 		671FE92F2678C7E700ACE738 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				671FE94A26790D6B00ACE738 /* Data */,
+				671FE947267901B700ACE738 /* Extensions */,
 				671FE9242678C62100ACE738 /* Assets.xcassets */,
 				671FE9262678C62100ACE738 /* LaunchScreen.storyboard */,
 			);
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				671FE91F2678C61000ACE738 /* MatchStateViewController.swift */,
+				671FE9452679012F00ACE738 /* MatchContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +158,23 @@
 				671FE93C2678D76C00ACE738 /* NetworkService.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		671FE947267901B700ACE738 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				671FE948267901C600ACE738 /* UIView Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		671FE94A26790D6B00ACE738 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				671FE94B26790D7A00ACE738 /* Image.swift */,
+				671FE94D26790DB400ACE738 /* Color.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +253,11 @@
 				671FE91C2678C61000ACE738 /* AppDelegate.swift in Sources */,
 				671FE91E2678C61000ACE738 /* SceneDelegate.swift in Sources */,
 				671FE9442678FEA700ACE738 /* APIServiceEndpoint.swift in Sources */,
+				671FE94C26790D7A00ACE738 /* Image.swift in Sources */,
 				671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */,
+				671FE949267901C600ACE738 /* UIView Extensions.swift in Sources */,
+				671FE94E26790DB500ACE738 /* Color.swift in Sources */,
+				671FE9462679012F00ACE738 /* MatchContentView.swift in Sources */,
 				671FE93B2678D12F00ACE738 /* Router.swift in Sources */,
 				671FE93F2678D82400ACE738 /* APIService.swift in Sources */,
 				671FE9392678CA0C00ACE738 /* MatchStatePresenter.swift in Sources */,
