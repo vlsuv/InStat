@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MatchStateViewController.swift
 //  InStat_vlsuv
 //
 //  Created by vlsuv on 15.06.2021.
@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MatchStateViewController: UIViewController {
+    
+    // MARK: - Properties
+    var presenter: MatchStatePresenterType?
+    
+    // MARK: - Init
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red

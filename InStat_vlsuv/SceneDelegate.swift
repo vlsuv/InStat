@@ -11,7 +11,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var rootViewController: UIViewController?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,8 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowsScene
         
-        rootViewController = ViewController()
-        window?.rootViewController = rootViewController
+        let rootNavigationController = UINavigationController()
+        let assemblyModuleBuilder = AssemblyModuleBuilder()
+        let router = Router(navigationController: rootNavigationController, assemblyBuilder: assemblyModuleBuilder)
+        router.initialViewController()
+        
+        window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
     }
 

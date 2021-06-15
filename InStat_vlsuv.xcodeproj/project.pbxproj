@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		671FE91C2678C61000ACE738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE91B2678C61000ACE738 /* AppDelegate.swift */; };
 		671FE91E2678C61000ACE738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE91D2678C61000ACE738 /* SceneDelegate.swift */; };
-		671FE9202678C61000ACE738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE91F2678C61000ACE738 /* ViewController.swift */; };
+		671FE9202678C61000ACE738 /* MatchStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE91F2678C61000ACE738 /* MatchStateViewController.swift */; };
 		671FE9252678C62100ACE738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671FE9242678C62100ACE738 /* Assets.xcassets */; };
 		671FE9282678C62100ACE738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671FE9262678C62100ACE738 /* LaunchScreen.storyboard */; };
+		671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9332678C96100ACE738 /* AssemblyModuleBuilder.swift */; };
+		671FE9392678CA0C00ACE738 /* MatchStatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9382678CA0C00ACE738 /* MatchStatePresenter.swift */; };
+		671FE93B2678D12F00ACE738 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE93A2678D12E00ACE738 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		671FE9182678C61000ACE738 /* InStat_vlsuv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InStat_vlsuv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671FE91B2678C61000ACE738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		671FE91D2678C61000ACE738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		671FE91F2678C61000ACE738 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		671FE91F2678C61000ACE738 /* MatchStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStateViewController.swift; sourceTree = "<group>"; };
 		671FE9242678C62100ACE738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671FE9272678C62100ACE738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671FE9292678C62100ACE738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		671FE9332678C96100ACE738 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
+		671FE9382678CA0C00ACE738 /* MatchStatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatePresenter.swift; sourceTree = "<group>"; };
+		671FE93A2678D12E00ACE738 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,8 @@
 				671FE91B2678C61000ACE738 /* AppDelegate.swift */,
 				671FE91D2678C61000ACE738 /* SceneDelegate.swift */,
 				671FE9292678C62100ACE738 /* Info.plist */,
+				671FE9332678C96100ACE738 /* AssemblyModuleBuilder.swift */,
+				671FE93A2678D12E00ACE738 /* Router.swift */,
 				671FE9302678C82900ACE738 /* MatchStateModule */,
 				671FE9312678C84700ACE738 /* ServicesLayer */,
 				671FE92F2678C7E700ACE738 /* Resources */,
@@ -76,7 +84,9 @@
 		671FE9302678C82900ACE738 /* MatchStateModule */ = {
 			isa = PBXGroup;
 			children = (
-				671FE91F2678C61000ACE738 /* ViewController.swift */,
+				671FE9372678C9CC00ACE738 /* Model */,
+				671FE9362678C9C100ACE738 /* Presenter */,
+				671FE9352678C9BA00ACE738 /* View */,
 			);
 			path = MatchStateModule;
 			sourceTree = "<group>";
@@ -94,6 +104,29 @@
 			children = (
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		671FE9352678C9BA00ACE738 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				671FE91F2678C61000ACE738 /* MatchStateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		671FE9362678C9C100ACE738 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				671FE9382678CA0C00ACE738 /* MatchStatePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		671FE9372678C9CC00ACE738 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671FE9202678C61000ACE738 /* ViewController.swift in Sources */,
+				671FE9202678C61000ACE738 /* MatchStateViewController.swift in Sources */,
 				671FE91C2678C61000ACE738 /* AppDelegate.swift in Sources */,
 				671FE91E2678C61000ACE738 /* SceneDelegate.swift in Sources */,
+				671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */,
+				671FE93B2678D12F00ACE738 /* Router.swift in Sources */,
+				671FE9392678CA0C00ACE738 /* MatchStatePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
