@@ -15,6 +15,10 @@
 		671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9332678C96100ACE738 /* AssemblyModuleBuilder.swift */; };
 		671FE9392678CA0C00ACE738 /* MatchStatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9382678CA0C00ACE738 /* MatchStatePresenter.swift */; };
 		671FE93B2678D12F00ACE738 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE93A2678D12E00ACE738 /* Router.swift */; };
+		671FE93D2678D76C00ACE738 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE93C2678D76C00ACE738 /* NetworkService.swift */; };
+		671FE93F2678D82400ACE738 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE93E2678D82400ACE738 /* APIService.swift */; };
+		671FE9412678E22B00ACE738 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9402678E22B00ACE738 /* Match.swift */; };
+		671FE9442678FEA700ACE738 /* APIServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE9432678FEA700ACE738 /* APIServiceEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		671FE9332678C96100ACE738 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		671FE9382678CA0C00ACE738 /* MatchStatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatePresenter.swift; sourceTree = "<group>"; };
 		671FE93A2678D12E00ACE738 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		671FE93C2678D76C00ACE738 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		671FE93E2678D82400ACE738 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		671FE9402678E22B00ACE738 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		671FE9432678FEA700ACE738 /* APIServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		671FE9312678C84700ACE738 /* ServicesLayer */ = {
 			isa = PBXGroup;
 			children = (
+				671FE9422678FE6600ACE738 /* NetworkService */,
 				671FE9322678C86100ACE738 /* APIService */,
 			);
 			path = ServicesLayer;
@@ -102,6 +111,8 @@
 		671FE9322678C86100ACE738 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				671FE93E2678D82400ACE738 /* APIService.swift */,
+				671FE9432678FEA700ACE738 /* APIServiceEndpoint.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -125,8 +136,17 @@
 		671FE9372678C9CC00ACE738 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				671FE9402678E22B00ACE738 /* Match.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		671FE9422678FE6600ACE738 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				671FE93C2678D76C00ACE738 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +220,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				671FE9202678C61000ACE738 /* MatchStateViewController.swift in Sources */,
+				671FE93D2678D76C00ACE738 /* NetworkService.swift in Sources */,
+				671FE9412678E22B00ACE738 /* Match.swift in Sources */,
 				671FE91C2678C61000ACE738 /* AppDelegate.swift in Sources */,
 				671FE91E2678C61000ACE738 /* SceneDelegate.swift in Sources */,
+				671FE9442678FEA700ACE738 /* APIServiceEndpoint.swift in Sources */,
 				671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */,
 				671FE93B2678D12F00ACE738 /* Router.swift in Sources */,
+				671FE93F2678D82400ACE738 /* APIService.swift in Sources */,
 				671FE9392678CA0C00ACE738 /* MatchStatePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

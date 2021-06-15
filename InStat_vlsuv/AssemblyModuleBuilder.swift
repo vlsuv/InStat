@@ -14,9 +14,10 @@ protocol AssemblyModuleBuilderType {
 
 final class AssemblyModuleBuilder: AssemblyModuleBuilderType {
     func createMatchStateModule(router: RouterProtocol) -> UIViewController {
-        let presenter = MatchStatePresenter()
-        
         let view = MatchStateViewController()
+        let apiService = APIService()
+        
+        let presenter = MatchStatePresenter(view: view, router: router, apiService: apiService)
         view.presenter = presenter
         
         return view

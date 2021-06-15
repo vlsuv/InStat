@@ -22,3 +22,11 @@ class MatchStateViewController: UIViewController {
 
 }
 
+extension MatchStateViewController: MatchStateViewType {
+    func succes() {
+    }
+    
+    func failure(with error: Error) {
+    }
+}
+
