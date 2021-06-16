@@ -13,6 +13,7 @@ protocol AssemblyModuleBuilderType {
     func createMatchStateModule(router: RouterProtocol) -> UIViewController
     func createMatchVideoListModule(router: RouterProtocol) -> UIViewController
     func createAVPPlayer(with url: URL) -> UIViewController
+    func createErrorAlertController(with error: Error) -> UIViewController
 }
 
 final class AssemblyModuleBuilder: AssemblyModuleBuilderType {
@@ -43,5 +44,14 @@ final class AssemblyModuleBuilder: AssemblyModuleBuilderType {
         view.player = player
         
         return view
+    }
+    
+    func createErrorAlertController(with error: Error) -> UIViewController {
+        let alert = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelButton)
+        
+        return alert
     }
 }

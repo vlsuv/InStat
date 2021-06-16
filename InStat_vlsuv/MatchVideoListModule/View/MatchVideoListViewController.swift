@@ -97,8 +97,7 @@ extension MatchVideoListViewController: MatchVideoListViewType {
         tableView?.reloadData()
     }
     
-    func failure(with error: Error) {
+    func failure() {
         activityIndicator.stopAnimating()
-        print(error)
     }
 }

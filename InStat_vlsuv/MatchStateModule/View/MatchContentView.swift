@@ -13,6 +13,7 @@ class MatchContentView: UIView {
     // MARK: - Properties
     var tournamentNameLabel: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 24)
         label.textColor = Color.black
         label.textAlignment = .left
         label.text = ""
@@ -37,6 +38,7 @@ class MatchContentView: UIView {
     
     var firstTeamNameLabel: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 18)
         label.textColor = Color.black
         label.textAlignment = .center
         label.text = ""
@@ -45,6 +47,7 @@ class MatchContentView: UIView {
     
     var secondTeamNameLabel: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 18)
         label.textColor = Color.black
         label.textAlignment = .center
         label.text = ""

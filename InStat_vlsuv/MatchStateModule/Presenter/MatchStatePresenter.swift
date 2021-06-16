@@ -10,7 +10,7 @@ import Foundation
 
 protocol MatchStateViewType: class {
     func succes(with match: Match)
-    func failure(with error: Error)
+    func failure()
 }
 
 protocol MatchStatePresenterType {
@@ -68,7 +68,8 @@ extension MatchStatePresenter {
                 case .success(let match):
                     self?.view?.succes(with: match)
                 case .failure(let error):
-                    self?.view?.failure(with: error)
+                    self?.router.showError(error)
+                    self?.view?.failure()
                 }
             }
         }

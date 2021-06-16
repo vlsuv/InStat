@@ -10,7 +10,7 @@ import Foundation
 
 protocol MatchVideoListViewType: class {
     func success()
-    func failure(with error: Error)
+    func failure()
 }
 
 protocol MatchVideoListPresenterType {
@@ -59,7 +59,8 @@ class MatchVideoListPresenter: MatchVideoListPresenterType, MatchVideoListPresen
                     self?.videos = matchVideos
                     self?.view?.success()
                 case .failure(let error):
-                    self?.view?.failure(with: error)
+                    self?.router.showError(error)
+                    self?.view?.failure()
                 }
             }
         }

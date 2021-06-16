@@ -63,10 +63,12 @@ class MatchStateViewController: UIViewController {
 // MARK: - MatchStateViewType
 extension MatchStateViewController: MatchStateViewType {
     func succes(with match: Match) {
+        contentView?.activityIndicator.stopAnimating()
         updateContentView(with: match)
     }
     
-    func failure(with error: Error) {
+    func failure() {
+        contentView?.activityIndicator.stopAnimating()
     }
 }
 
@@ -81,8 +83,6 @@ extension MatchStateViewController {
     }
     
     private func updateContentView(with match: Match) {
-        contentView?.activityIndicator.stopAnimating()
-        
         contentView?.tournamentNameLabel.text = match.tournament.name_eng
         contentView?.matchDateLabel.text = match.date
         
