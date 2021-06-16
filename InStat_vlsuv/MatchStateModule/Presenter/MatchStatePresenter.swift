@@ -44,6 +44,14 @@ class MatchStatePresenter: MatchStatePresenterType, MatchStatePresenterInputs, M
         self.apiService = apiService
         
         getMatchInfo()
+        apiService.getMatchVideoURLs { result in
+            switch result {
+            case .success(let matchVideos):
+                print(matchVideos)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     // MARK: - Inputs Handlers

@@ -23,6 +23,9 @@
 		671FE949267901C600ACE738 /* UIView Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE948267901C600ACE738 /* UIView Extensions.swift */; };
 		671FE94C26790D7A00ACE738 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE94B26790D7A00ACE738 /* Image.swift */; };
 		671FE94E26790DB500ACE738 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671FE94D26790DB400ACE738 /* Color.swift */; };
+		67FF2D4F2679E17800433CBF /* MatchVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D4E2679E17800433CBF /* MatchVideo.swift */; };
+		67FF2D512679E18C00433CBF /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D502679E18C00433CBF /* Team.swift */; };
+		67FF2D532679E1AA00433CBF /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D522679E1AA00433CBF /* Tournament.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		671FE948267901C600ACE738 /* UIView Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extensions.swift"; sourceTree = "<group>"; };
 		671FE94B26790D7A00ACE738 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		671FE94D26790DB400ACE738 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		67FF2D4E2679E17800433CBF /* MatchVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVideo.swift; sourceTree = "<group>"; };
+		67FF2D502679E18C00433CBF /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		67FF2D522679E1AA00433CBF /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				671FE9402678E22B00ACE738 /* Match.swift */,
+				67FF2D4E2679E17800433CBF /* MatchVideo.swift */,
+				67FF2D502679E18C00433CBF /* Team.swift */,
+				67FF2D522679E1AA00433CBF /* Tournament.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,15 +261,18 @@
 				671FE9412678E22B00ACE738 /* Match.swift in Sources */,
 				671FE91C2678C61000ACE738 /* AppDelegate.swift in Sources */,
 				671FE91E2678C61000ACE738 /* SceneDelegate.swift in Sources */,
+				67FF2D4F2679E17800433CBF /* MatchVideo.swift in Sources */,
 				671FE9442678FEA700ACE738 /* APIServiceEndpoint.swift in Sources */,
 				671FE94C26790D7A00ACE738 /* Image.swift in Sources */,
 				671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */,
 				671FE949267901C600ACE738 /* UIView Extensions.swift in Sources */,
 				671FE94E26790DB500ACE738 /* Color.swift in Sources */,
 				671FE9462679012F00ACE738 /* MatchContentView.swift in Sources */,
+				67FF2D512679E18C00433CBF /* Team.swift in Sources */,
 				671FE93B2678D12F00ACE738 /* Router.swift in Sources */,
 				671FE93F2678D82400ACE738 /* APIService.swift in Sources */,
 				671FE9392678CA0C00ACE738 /* MatchStatePresenter.swift in Sources */,
+				67FF2D532679E1AA00433CBF /* Tournament.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

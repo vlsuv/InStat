@@ -30,7 +30,9 @@ enum APIServiceEndpoint {
             guard let paramData = try? JSONSerialization.data(withJSONObject: param)  else { return nil }
             return paramData
         case .viewURL:
-            return nil
+            let param: [String: Any] = ["match_id":1724836, "sport_id":1]
+            guard let paramData = try? JSONSerialization.data(withJSONObject: param)  else { return nil }
+            return paramData
         }
     }
     
@@ -39,7 +41,7 @@ enum APIServiceEndpoint {
         case .matchInfo:
             return "POST"
         case .viewURL:
-            return "GET"
+            return "POST"
         }
     }
     
@@ -48,7 +50,7 @@ enum APIServiceEndpoint {
         case .matchInfo:
             return ["Content-Type": "application/json"]
         case .viewURL:
-            return nil
+            return ["Content-Type": "application/json"]
         }
     }
     
@@ -60,12 +62,18 @@ enum APIServiceEndpoint {
             var request = URLRequest(url: url)
             request.allHTTPHeaderFields = header
             request.httpMethod = method
-            request.allHTTPHeaderFields = header
             request.httpBody = bodyParam
             
             return request
         case .viewURL:
-            return nil
+            let url =  APIServiceEndpoint.baseURL.appendingPathComponent(path)
+            
+            var request = URLRequest(url: url)
+            request.allHTTPHeaderFields = header
+            request.httpMethod = method
+            request.httpBody = bodyParam
+            
+            return request
         }
     }
 }

@@ -14,6 +14,7 @@ enum APIServiceError: Error {
 
 protocol APIServiceProtocol: NetworkServiceProtocol {
     func getMatchInfo(completionHandler: @escaping (Result<Match, Error>) -> ())
+    func getMatchVideoURLs(completionHandler: @escaping (Result<[MatchVideo], Error>) -> ())
 }
 
 class APIService: APIServiceProtocol {
@@ -48,6 +49,31 @@ extension APIService {
             switch result {
             case .Succes(let match):
                 completionHandler(.success(match))
+            case .Failure(let error):
+                completionHandler(.failure(error))
+            }
+        }
+    }
+    
+    
+    func getMatchVideoURLs(completionHandler: @escaping (Result<[MatchVideo], Error>) -> ()) {
+        guard let request = APIServiceEndpoint.viewURL.request else {
+            completionHandler(.failure(APIServiceError.IncorrentRequestError))
+            return
+        }
+        
+        fetch(request: request, parse: { (data) -> ([MatchVideo])? in
+            
+            guard let decodeMatchVideos = try? JSONDecoder().decode([MatchVideo].self, from: data) else {
+                return nil
+            }
+            
+            return decodeMatchVideos
+        }) { (result) in
+            switch result {
+                
+            case .Succes(let matchVideos):
+                completionHandler(.success(matchVideos))
             case .Failure(let error):
                 completionHandler(.failure(error))
             }
