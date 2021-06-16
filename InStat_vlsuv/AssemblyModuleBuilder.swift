@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVKit
 
 protocol AssemblyModuleBuilderType {
     func createMatchStateModule(router: RouterProtocol) -> UIViewController
+    func createMatchVideoListModule(router: RouterProtocol) -> UIViewController
+    func createAVPPlayer(with url: URL) -> UIViewController
 }
 
 final class AssemblyModuleBuilder: AssemblyModuleBuilderType {
@@ -19,6 +22,25 @@ final class AssemblyModuleBuilder: AssemblyModuleBuilderType {
         
         let presenter = MatchStatePresenter(view: view, router: router, apiService: apiService)
         view.presenter = presenter
+        
+        return view
+    }
+    
+    func createMatchVideoListModule(router: RouterProtocol) -> UIViewController {
+        let view = MatchVideoListViewController()
+        let apiService = APIService()
+        
+        let presenter = MatchVideoListPresenter(view: view, router: router, apiService: apiService)
+        view.presenter = presenter
+        
+        return view
+    }
+    
+    func createAVPPlayer(with url: URL) -> UIViewController {
+        let player = AVPlayer(url: url)
+        
+        let view = AVPlayerViewController()
+        view.player = player
         
         return view
     }

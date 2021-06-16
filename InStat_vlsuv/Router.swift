@@ -15,6 +15,8 @@ protocol BaseRouterProtocol {
 
 protocol RouterProtocol: BaseRouterProtocol {
     func initialViewController()
+    func showVideoList()
+    func showMatchVideo(with url: URL)
 }
 
 class Router: RouterProtocol {
@@ -31,5 +33,17 @@ class Router: RouterProtocol {
         guard let navigationController = navigationController, let matchStateViewController = assemblyBuilder?.createMatchStateModule(router: self) else { return }
         
         navigationController.viewControllers = [matchStateViewController]
+    }
+    
+    func showVideoList() {
+        guard let navigationController = navigationController, let matchVideoListViewController = assemblyBuilder?.createMatchVideoListModule(router: self) else { return }
+        
+        navigationController.pushViewController(matchVideoListViewController, animated: true)
+    }
+    
+    func showMatchVideo(with url: URL) {
+        guard let navigationController = navigationController, let avpPlayerViewController = assemblyBuilder?.createAVPPlayer(with: url) else { return }
+        
+        navigationController.present(avpPlayerViewController, animated: true)
     }
 }

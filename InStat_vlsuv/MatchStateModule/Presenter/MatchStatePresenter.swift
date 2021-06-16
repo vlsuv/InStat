@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MatchStateViewType {
+protocol MatchStateViewType: class {
     func succes(with match: Match)
     func failure(with error: Error)
 }
@@ -33,7 +33,7 @@ class MatchStatePresenter: MatchStatePresenterType, MatchStatePresenterInputs, M
     var inputs: MatchStatePresenterInputs { return self }
     var outputs: MatchStatePresenterOutputs { return self }
     
-    private let view: MatchStateViewType
+    weak private var view: MatchStateViewType?
     private let router: RouterProtocol
     private let apiService: APIServiceProtocol
     
@@ -44,14 +44,6 @@ class MatchStatePresenter: MatchStatePresenterType, MatchStatePresenterInputs, M
         self.apiService = apiService
         
         getMatchInfo()
-        apiService.getMatchVideoURLs { result in
-            switch result {
-            case .success(let matchVideos):
-                print(matchVideos)
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
     
     // MARK: - Inputs Handlers
@@ -60,7 +52,7 @@ class MatchStatePresenter: MatchStatePresenterType, MatchStatePresenterInputs, M
     }
     
     func didTapVideo() {
-        print("handler video")
+        router.showVideoList()
     }
     
     // MARK: - Outputs Handlers
@@ -74,9 +66,9 @@ extension MatchStatePresenter {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let match):
-                    self?.view.succes(with: match)
+                    self?.view?.succes(with: match)
                 case .failure(let error):
-                    self?.view.failure(with: error)
+                    self?.view?.failure(with: error)
                 }
             }
         }

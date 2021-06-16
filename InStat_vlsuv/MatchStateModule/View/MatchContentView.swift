@@ -61,7 +61,7 @@ class MatchContentView: UIView {
     
     var videoButton: UIButton = {
         let button = UIButton()
-        let normalAttributedString = NSAttributedString(string: "Video", attributes: [
+        let normalAttributedString = NSAttributedString(string: "Video List", attributes: [
             NSAttributedString.Key.foregroundColor: Color.white
         ])
         button.setAttributedTitle(normalAttributedString, for: .normal)

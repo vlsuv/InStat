@@ -26,6 +26,8 @@
 		67FF2D4F2679E17800433CBF /* MatchVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D4E2679E17800433CBF /* MatchVideo.swift */; };
 		67FF2D512679E18C00433CBF /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D502679E18C00433CBF /* Team.swift */; };
 		67FF2D532679E1AA00433CBF /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D522679E1AA00433CBF /* Tournament.swift */; };
+		67FF2D552679E4C100433CBF /* MatchVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D542679E4C100433CBF /* MatchVideoListViewController.swift */; };
+		67FF2D582679E87000433CBF /* MatchVideoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF2D572679E87000433CBF /* MatchVideoListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		67FF2D4E2679E17800433CBF /* MatchVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVideo.swift; sourceTree = "<group>"; };
 		67FF2D502679E18C00433CBF /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		67FF2D522679E1AA00433CBF /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		67FF2D542679E4C100433CBF /* MatchVideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVideoListViewController.swift; sourceTree = "<group>"; };
+		67FF2D572679E87000433CBF /* MatchVideoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVideoListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				671FE9292678C62100ACE738 /* Info.plist */,
 				671FE9332678C96100ACE738 /* AssemblyModuleBuilder.swift */,
 				671FE93A2678D12E00ACE738 /* Router.swift */,
+				67FF2D562679E6D700433CBF /* MatchVideoListModule */,
 				671FE9302678C82900ACE738 /* MatchStateModule */,
 				671FE9312678C84700ACE738 /* ServicesLayer */,
 				671FE92F2678C7E700ACE738 /* Resources */,
@@ -154,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				671FE9402678E22B00ACE738 /* Match.swift */,
-				67FF2D4E2679E17800433CBF /* MatchVideo.swift */,
 				67FF2D502679E18C00433CBF /* Team.swift */,
 				67FF2D522679E1AA00433CBF /* Tournament.swift */,
 			);
@@ -184,6 +188,40 @@
 				671FE94D26790DB400ACE738 /* Color.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		67FF2D562679E6D700433CBF /* MatchVideoListModule */ = {
+			isa = PBXGroup;
+			children = (
+				67FF2D592679EA0F00433CBF /* Model */,
+				67FF2D5B2679EA2400433CBF /* View */,
+				67FF2D5A2679EA1900433CBF /* Presenter */,
+			);
+			path = MatchVideoListModule;
+			sourceTree = "<group>";
+		};
+		67FF2D592679EA0F00433CBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67FF2D4E2679E17800433CBF /* MatchVideo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67FF2D5A2679EA1900433CBF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				67FF2D572679E87000433CBF /* MatchVideoListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		67FF2D5B2679EA2400433CBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67FF2D542679E4C100433CBF /* MatchVideoListViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +302,10 @@
 				67FF2D4F2679E17800433CBF /* MatchVideo.swift in Sources */,
 				671FE9442678FEA700ACE738 /* APIServiceEndpoint.swift in Sources */,
 				671FE94C26790D7A00ACE738 /* Image.swift in Sources */,
+				67FF2D582679E87000433CBF /* MatchVideoListPresenter.swift in Sources */,
 				671FE9342678C96100ACE738 /* AssemblyModuleBuilder.swift in Sources */,
 				671FE949267901C600ACE738 /* UIView Extensions.swift in Sources */,
+				67FF2D552679E4C100433CBF /* MatchVideoListViewController.swift in Sources */,
 				671FE94E26790DB500ACE738 /* Color.swift in Sources */,
 				671FE9462679012F00ACE738 /* MatchContentView.swift in Sources */,
 				67FF2D512679E18C00433CBF /* Team.swift in Sources */,
